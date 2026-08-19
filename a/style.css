@@ -12,6 +12,8 @@
   --line:#E2E6EA;
   --mist:#F4F7F9;
   --paper:#fff;
+  --jet:#14181C;
+  --jet-2:#2A323A;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -23,12 +25,16 @@ img{max-width:100%;display:block;}
 
 /* ── buttons ── */
 .btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.9rem;font-weight:700;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;border-radius:3px;transition:.25s cubic-bezier(.2,.8,.2,1);cursor:pointer;border:0;}
-.btn-primary{background:var(--sand);color:var(--navy-deep);}
-.btn-primary:hover{background:var(--sand-l);transform:translateY(-2px);box-shadow:0 12px 28px -12px rgba(201,162,39,.7);}
+.btn-primary{background:var(--jet);color:#fff;}
+.btn-primary:hover{background:var(--jet-2);transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(10,15,20,.6);}
 .btn-ghost{border:2px solid rgba(255,255,255,.5);color:#fff;}
-.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1);}
-.btn-dark{background:var(--navy);color:#fff;}
-.btn-dark:hover{background:var(--navy-2);transform:translateY(-2px);}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.12);}
+.btn-dark{background:transparent;color:var(--jet);border:2px solid var(--jet);}
+.btn-dark:hover{background:var(--jet);color:#fff;transform:translateY(-2px);}
+/* On dark photo sections the primary flips to white-on-dark */
+.hero .btn-primary,.band .btn-primary,.phero .btn-primary{background:#fff;color:var(--jet);}
+.hero .btn-primary:hover,.band .btn-primary:hover,.phero .btn-primary:hover{
+  background:#E9EEF2;color:var(--jet);box-shadow:0 14px 30px -14px rgba(0,0,0,.65);}
 
 /* ── utility bar ── */
 .util{background:var(--navy-deep);color:#A9B7C4;}
