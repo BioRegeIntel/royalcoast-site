@@ -235,3 +235,16 @@ ul.usel li b{color:var(--ink);}
   background-image:repeating-linear-gradient(45deg,rgba(201,162,39,.07) 0 2px,transparent 2px 14px);}
 /* broken/missing <img> should not show a torn-icon */
 img{color:transparent;}
+
+/* ── project gallery ─────────────────────────────────────── */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+.gi{position:relative;margin:0;overflow:hidden;border-radius:6px;background:var(--navy-2);
+    border:1px solid var(--line);}
+.gi img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;
+    transition:transform .6s cubic-bezier(.2,.8,.2,1);}
+.gi:hover img{transform:scale(1.06);}
+.gi figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.5rem 1.1rem .9rem;
+    font-family:"Barlow Condensed",sans-serif;font-size:1.02rem;letter-spacing:.03em;
+    color:#fff;background:linear-gradient(to top,rgba(10,21,32,.86),transparent);}
+@media(max-width:900px){.gal{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.gal{grid-template-columns:1fr;}}
